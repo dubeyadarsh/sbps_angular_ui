@@ -1,0 +1,50 @@
+<div class="filter-box mx-2 my-1">
+    <div>
+        <select [(ngModel)]="filter1">
+            <!-- Dropdown options for Filter 1 -->
+            <option value="">Select Class...</option>
+            <option *ngFor="let option of classOptions" [value]="option.value">{{ option.label }}</option>
+          
+          </select>
+        
+          <!-- <select [(ngModel)]="filter2">
+        
+            <option value="">Select Annual year...</option>
+            <option *ngFor="let option of annualYearOptions" [value]="option.value">{{ option.label }}</option>
+          
+          </select> -->
+        
+    </div>
+    <div class="">
+    <button class="mx-1" mat-stroked-button (click)="fetchData()">Submit</button>
+    <button [style.display]="displayStyle" id="attendanceBtn" mat-raised-button (click)="markAbsent()" >Mark Absent</button>
+  </div>
+
+  </div>
+  
+
+<ag-grid-angular class="ag-theme-quartz mx-2 mt-3 displayGrid" 
+ 
+  [rowData]="rowData"
+  [columnDefs]="colDefs"
+
+  >
+</ag-grid-angular>
+<div class="pagination mx-2">
+    <div class="pagination-options">
+      <span>Show:</span>
+      <select class="mx-1" (change)="onPageSizeChange($event)">
+        <option value="10">10</option>
+        <option value="25">25</option>
+        <option value="50">50</option>
+        <!-- Add more options as needed -->
+      </select>
+      <span>of {{ totalItems }} items</span>
+    </div>
+    <div class="page-info">
+        <span>Page:</span>
+      <span (click)="onPageClick(page)" *ngFor="let page of totalPages" [class.active]="currentPage === page">{{ page }}</span>
+    </div>
+  </div>
+  
+  

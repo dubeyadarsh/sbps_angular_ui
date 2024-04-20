@@ -1,0 +1,20 @@
+
+<app-template> </app-template>
+  <div class="studentNav">
+    <div class="studentDiv">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" [routerLink]="['/student/addStudent']" routerLinkActive="active-link"><strong> Add Student </strong></a>
+            <a class="nav-item nav-link" >Migrate Student</a>
+            <!-- <a class="nav-item nav-link" href="#">Attendance</a> -->
+            <a class="nav-item nav-link" [routerLink]="['/student/viewStudent']" routerLinkActive="active-link"><strong> View Students </strong></a>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <router-outlet></router-outlet>
+  </div>
+
+ 

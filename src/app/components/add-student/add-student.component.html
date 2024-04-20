@@ -1,0 +1,79 @@
+<div class="container my-3">
+  <br />
+    <form (ngSubmit)="submitForm()" #myForm="ngForm">
+  
+      <div class="row my-2">
+        <!-- <div class="col-md-6">
+          <label for="dropdown1" class="form-label required"><strong> Annual year </strong></label>
+          <select class="form-select" id="dropdown1" name="dropdown1" [(ngModel)]="formData.ay" required>
+            <option value="">Select year...</option>
+            <option *ngFor="let option of annualYearOptions" [value]="option.value">{{ option.label }}</option>
+
+          </select>
+        </div> -->
+  
+        <div class="col-md-6 ">
+          <label for="dropdown2" class="form-label required required"><strong> Standard </strong></label>
+          <select class="form-select" id="dropdown2" name="dropdown2" [(ngModel)]="formData.std" required>
+            <option value="">Select class...</option>
+            <option *ngFor="let option of classOptions" [value]="option.value">{{ option.label }}</option>
+
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label for="srNumber" class="form-label required">SR Number</label>
+          <input type="text" class="form-control" id="srnumber" name="srNumber" [(ngModel)]="formData.srNumber" required>
+        </div>
+      </div>
+  
+      <div class="row my-2">
+        <div class="col-md-6">
+          <label for="name" class="form-label required">Name</label>
+          <input type="text" class="form-control" id="name" name="name" [(ngModel)]="formData.name" required>
+        </div>
+  
+        <div class="col-md-6">
+          <label for="fatherName" class="form-label required">Father's Name</label>
+          <input type="text" class="form-control" id="fatherName" name="fatherName" [(ngModel)]="formData.fathername" required>
+        </div>
+      </div>
+  
+      <div class="row my-2">
+        <div class="col-md-6">
+          <label for="dob" class="form-label required">Date of Birth</label>
+          <input type="date" class="form-control" id="dob" name="dob" [(ngModel)]="formData.dob" required>
+        </div>
+  
+        <div class="col-md-6">
+          <label for="contact" class="form-label required">Contact</label>
+          <input type="tel" class="form-control" id="contact" name="contact" [(ngModel)]="formData.contact" required>
+        </div>
+      </div>
+      <div class="row my-2">
+       
+  
+    
+    </div> <div class="row my-2">
+      <div class="col-md-6">
+        <label for="motherName" class="form-label required">Mother's Name</label>
+        <input type="text" class="form-control" id="motherName" name="motherName" [(ngModel)]="formData.mothername" required>
+      </div>
+      <div class="mb-3 my-2 col-md-6">
+        <label for="address" class="form-label required">Address</label>
+        <input class="form-control" id="address" name="address" [(ngModel)]="formData.address" required>
+      </div>
+      
+    </div>
+  
+  <div class="row ">
+    <div class="col-md-6">
+      <label for="panNo" class="form-label required">Pan Number</label>
+      <input type="text" class="form-control" id="panNo" name="panNo" [(ngModel)]="formData.panNo" required>
+    </div>
+    <div class="col-md-6 d-flex justify-content-end">
+      <button type="submit" [disabled]="!myForm.valid" class="btn text-center me-0 mx-auto btn-bg mt-4 w-50">Submit</button>
+    </div>
+    </div>
+    </form>
+  </div>
+  

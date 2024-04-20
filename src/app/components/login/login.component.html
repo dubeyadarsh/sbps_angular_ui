@@ -1,0 +1,25 @@
+<!-- login.component.html -->
+
+<div class="container">
+    <div class="row justify-content-center align-items-center vh-100">
+      <div class="col-md-6 text-center">
+        <img src="/assets/logo.png" alt="Logo" class="logo mb-4">
+        <form class="login-form p-4" (submit)="login()">
+          <div class="mb-3">
+            <mat-form-field class="w-100">
+              <input matInput placeholder="Username" [(ngModel)]="username" name="username" required>
+            </mat-form-field>
+          </div>
+          <div class="mb-3">
+            <mat-form-field class="w-100">
+              <input matInput type="password" placeholder="Password" [(ngModel)]="password" name="password" required>
+            </mat-form-field>
+          </div>
+          <div class="d-grid">
+            <button mat-raised-button color="primary" type="submit" class="btn-lg">Login</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  

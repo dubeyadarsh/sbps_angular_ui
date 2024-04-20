@@ -1,0 +1,77 @@
+<app-template> </app-template>
+<div class="homeDiv p-2">
+<div class="main">
+   
+      <div class="d-flex mx-1 my-1 justify-content-between">
+       
+          <div *ngFor="let option of listOfSuggestions" class="sugggestedRoute h-100">
+            <mat-card class="h-100">
+                <!-- Image banner -->
+                <img class="cardimg" mat-card-image src={{option.imgPath}} alt="Image">
+              
+                          <br>   
+                          <mat-card-title><h3 class="px-3"> {{ option.title }} </h3></mat-card-title>
+
+                        
+                <!-- Content -->
+                <mat-card-content >
+                    <p>
+                 {{option.desc}}
+                </p>
+                </mat-card-content>
+              
+                <!-- Footer -->
+                <mat-card-actions >
+                  <!-- Footer content here -->
+                  <button routerLink={{option.routeName}} mat-button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                  </svg></button>
+                </mat-card-actions>
+              </mat-card>
+          </div>
+ 
+        <!-- <div  class="mx-2 w-100 my-1 topPerformer ">
+         <img class="img topPerImg" src="/assets/homeCard/topPerformers.jpg" alt="">
+            <div class="px-3">
+            <h3 class=" my-3">Star</h3>
+
+            <p>1. John Pioe (Std: 4th)</p>
+            <p>2. Sam Tsun  (Std: 5th)</p>
+            </div>
+        </div> -->
+      </div>
+   
+      <br>
+      <div class="d-flex mx-1">
+
+        <div class="databox db1">
+          <div class="textbox text-light  my-4 w-100 ">
+            <h3 class="text-center">#389</h3>
+            <p class="text-center  px-2">Number of Student</p>
+          </div>
+        </div>
+        <div class="databox db2">
+          <div class="textbox text-light  my-4 w-100 ">
+            <h3 class="text-center">#15</h3>
+            <p class="text-center px-2">Number of Teacher</p>
+          </div>
+        </div>
+        <div class="databox db3">
+          <div class="textbox text-light  my-4 w-100 ">
+            <h3 class="text-center">89.25%</h3>
+            <p class="text-center px-2">Total Attendance</p>
+          </div>
+        </div>
+        <div class="databox db4">
+          <div class="textbox text-light  my-4 w-100 ">
+            <h3 class="text-center">₹ 72,871</h3>
+            <p class="text-center px-2">Finance</p>
+          </div>
+        </div>
+  
+  
+  
+      </div>
+</div>
+   
+</div>

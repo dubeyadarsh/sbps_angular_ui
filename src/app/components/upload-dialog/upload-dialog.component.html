@@ -1,0 +1,18 @@
+<h2 mat-dialog-title class="my-0">Upload Excel File</h2>
+
+<div mat-dialog-content>
+  <hr />
+  <!-- Input for file upload -->
+  <input type="file" (change)="onFileChange($event)" accept=".xlsx, .xls" />
+</div>
+<div class="d-flex justify-content-between">
+  <span class="noteDiv text-danger">*Empty cells in the marks Excel will be filled with random numbers between 39 and 46.</span>
+
+<div mat-dialog-actions class="d-flex align-items-center ">
+  <!-- Buttons for dialog actions -->
+
+  <button mat-button [mat-dialog-close]="false">Cancel</button>
+  <button (click)="uploadTemplate()" mat-button [ngClass]="isValidExcel? 'uploadBtnActive':'' " [mat-dialog-close]="true" [disabled]="!isValidExcel">Upload</button>
+</div>
+
+</div>

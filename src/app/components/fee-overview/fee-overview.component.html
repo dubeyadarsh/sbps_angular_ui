@@ -1,0 +1,52 @@
+<div class="container mt-3">
+    <h2 class="text-center fw-bold my-2">Overview</h2>
+    <hr>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th style="width: 10%;">Sr. No.</th>
+                <th style="width: 60%;">Category</th>
+                <th style="width: 30%;">Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Admission Fee</td>
+                <td>{{ admissionFee }}</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Tution Fee</td>
+                <td>{{ totalMonthFee }}
+                   </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Vehcile Fee</td>
+                <td>{{totalVehFee}}</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Other Fee</td>
+                <td>{{OtherFee}}</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Misc. Fee</td>
+                <td>{{MiscFee}}</td>
+            </tr>
+            <!-- Add more rows as needed -->
+            <tr class="gross-total">
+                <td class="fw-bold fst-italic" colspan="2">Gross Total</td>
+                <td class="fw-bold fst-italic text-success-emphasis" >{{totalFee}}</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <hr>
+<div class="d-flex justify-content-end m-2 ">
+<button (click)="close()" class="btn btn-danger mx-1">Close</button>
+<button (click)="saveFee()" class="btn btn-success mx-1">Save</button>
+</div>
+</div>

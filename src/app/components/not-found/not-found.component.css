@@ -1,0 +1,53 @@
+body, html {
+   
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.main-container {
+    
+    max-width: 600px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.notFound{
+    height: 100vh;
+}
+.notfound-404 {
+    font-size: 120px;
+    line-height: 120px;
+    color: #262626;
+}
+
+.notfound-404 span {
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><path fill="%23262626" d="M60.9,65.4c0,0-5.6,0-8.4,0c-2.8,0-5,2.2-5,5v60c0,2.8,2.2,5,5,5h60c2.8,0,5-2.2,5-5v-60c0-2.8-2.2-5-5-5c-2.8,0-8.4,0-8.4,0"/></svg>');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.notfound {
+    font-size: 22px;
+    line-height: 1.4;
+    color: #000;
+    margin-bottom: 20px;
+    
+}
+
+.notfound a {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #8e44ad;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}

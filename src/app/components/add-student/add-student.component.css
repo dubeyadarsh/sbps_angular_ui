@@ -1,0 +1,53 @@
+.addstudentNav{
+    position: absolute;
+    top:105px;
+    width:100%;
+    height: calc(100vh-64px);
+    overflow-x: hidden !important;
+}
+.addstudentDiv{
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    margin: 5px;
+    padding: 5px;
+
+}
+/* Apply red color to the asterisk */
+.form-label.required:after {
+    content: '*';
+    color: red;
+    margin-left: 4px;
+  }
+.btn-bg {
+    background-color:#3f51b5;
+    color: white;
+}
+.form-styled {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .form-label {
+    color: #495057;
+    font-weight: 600;
+  }
+  
+  .form-control {
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+  }
+  
+  .btn-submit {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-submit:hover {
+    background-color: #0056b3;
+  }
+  

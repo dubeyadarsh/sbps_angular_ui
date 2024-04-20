@@ -1,0 +1,106 @@
+<app-template> </app-template>
+<!-- search-bar.component.html -->
+<!-- search-bar.component.html -->
+<div class="mainFeeSection">
+  <div class="container">
+    <div class="d-flex">
+  <div class=" filterContainer input-group  my-3">
+    <span  class="input-group-text" id="filter-icon" (click)="toggleFilterOptions()"><mat-icon>filter_list</mat-icon></span>
+    <input matInput [matAutocomplete]="auto" (input)="onInputChange($event)" type="text" class="form-control" placeholder="Enter student name to search fee details..." aria-label="Username" aria-describedby="basic-addon1">
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option  *ngFor="let suggestion of suggestions" [value]="suggestion.name + ' c/o ' + suggestion.f_name" (click)="selectedSuggestion=suggestion">
+        {{ suggestion.name }} c/o {{suggestion.f_name}}
+      </mat-option>
+    </mat-autocomplete>
+    <span class="input-group-text" id="search-icon">
+      <mat-icon (click)="getFeeDetails()">search</mat-icon>
+    </span>
+  </div>
+  <div class="addFee">
+   <button (click)="openPayFeeBox()" class="btn payButton d-flex mx-4 my-3">
+    Pay <mat-icon>add</mat-icon> </button>
+  </div>
+</div>
+  <div  *ngIf="showFilterOptions" class="filter-options d-flex flex-wrap justify-content-between" >
+    <!-- Additional buttons or options -->
+    <button  
+    [ngClass]="{ 'selected': item === selectedClass }"  (click)="filterSelect(item)" class="btn btn-light" *ngFor="let item of classOptions" mat-button>{{item.label}}</button>
+   
+  </div>
+</div>
+
+<div class="container px-2 ">
+<div class="getFeeDet" >
+  <div class="d-flex h-100 justify-content-center align-items-center" *ngIf="isNotFeeDetails; else DataFound">
+    <p class="noDataPres">No Data Found</p>
+  </div>
+  <ng-template #DataFound>
+   <div style="height:100%;" class="d-flex flex-wrap p-sm-2" >
+    
+    <div class="col-12 py-1 px-sm-3 h-100 ">
+      <div class="d-flex justify-content-between">
+        <h2 class="transaction-history-header">Transaction History of <span class="dynamic-name">{{this.selectedSuggestion.name}}</span></h2>
+         <h2>Standard :  <span class="dynamic-name">{{selectedClass.label}}</span> </h2>
+        </div>
+     <div class="tableData">
+
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th style="width: 5%;">Id</th>
+            <th style="width: 15%;">Admission Fee</th>
+            <th style="width: 15%;">Monthly Fee</th>
+            <th style="width: 15%;">Vehicle Fee</th>
+            <th style="width: 15%;">Other Fee</th>
+            <th style="width: 15%;">Misc Fee</th>
+            <th style="width: 25%;">Created On</th>
+            <th style="width: 25%;">Total</th>
+          </tr>
+        </thead>
+        <tbody class="table-body">
+          <tr *ngFor="let feeitem of feeTableData">
+            <td>{{feeitem.id}}</td>
+            <td>{{feeitem.admission_fee==0?'-':feeitem.admission_fee}}</td>
+            <td>{{feeitem.month_fee==0?'-':feeitem.month_fee}}</td>
+            <td>{{feeitem.month_fee_vehicle==0?'-':feeitem.month_fee_vehicle}}</td>
+            <td>{{feeitem.other_fee==0?'-':feeitem.other_fee}}</td>
+            <td>{{feeitem.misc_fee==0?'-':feeitem.misc_fee}}</td>
+            <td>{{feeitem.payment_on | dateFormat}}</td>
+            <td>{{feeitem.admission_fee +
+              feeitem.month_fee +
+              feeitem.month_fee_vehicle +
+              feeitem.other_fee +
+              feeitem.misc_fee}}</td>
+          </tr>
+          
+        </tbody>
+       
+      </table>
+    </div>
+    <hr>
+      <div class="d-flex justify-content-between"> 
+              <span class="d-flex">
+                <img class="doneLogo" src="/assets/correct-icon.svg" alt="done">
+              <span style="font-weight:500"> <strong> Paid  Monthly Fee  :</strong> </span> 
+              <p style="overflow-wrap: break-word; word-wrap: break-word; "> <i *ngFor="let item of paidMonthlyDetails">{{item}} </i>  </p>
+            </span>
+            <span class="d-flex">
+              <img class="doneLogo" src="/assets/correct-icon.svg" alt="done">
+              <span style="font-weight:500"> <strong> Paid Vehcile fee  :</strong>  
+              </span>
+            <p style="overflow-wrap: break-word; word-wrap: break-word;">  <i *ngFor="let item of paidVehMonthlyDetails">{{item}}, </i>  </p>
+          
+          </span>
+     
+      
+      </div>
+    </div>
+
+   </div>
+  </ng-template>
+</div>
+   
+</div>
+
+
+</div>

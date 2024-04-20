@@ -1,0 +1,22 @@
+.studentNav{
+    position: absolute;
+    top:65px;
+    width:100%;
+    height: calc(100vh-64px);
+    overflow-x: hidden !important;
+}
+.studentDiv{
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    margin: 5px;
+    padding: 5px;
+
+}
+.studentDiv nav{
+    background-color: whitesmoke;
+}
+.active-link {
+    font-weight: bold; /* Apply styles to indicate active link, like bold text */
+    color:  #E0115F; /* Change color for the active link */
+
+  }
+  

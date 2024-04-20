@@ -1,0 +1,59 @@
+<div class="container feeContainer">
+<h3 class="heading text-center ">
+PAY YOUR FEE !! 
+</h3>
+<hr class="separator" /> <!-- just a spacer by default -->
+
+
+<div class="row">
+    <div class="col-6">
+<div class="d-flex justify-content-between">
+    <h3>Admission Fee <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right" viewBox="0 0 16 16">
+        <path d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753"/>
+      </svg></h3>
+
+
+</div>
+
+<div class="d-flex justify-content-start  px-sm-3 px-md-5">
+    <div class="'w-50"> <mat-checkbox *ngIf="isAFBoxOpen; else elseBlock" color="primary" [(ngModel)]="isChecked">Admission fee</mat-checkbox> 
+        <ng-template #elseBlock>
+            <button class="btn btn-success">Already Paid</button>
+          </ng-template>
+    </div>
+</div>
+</div>
+<div class="col-6">
+    <div class="d-flex justify-content-between">
+        <h3>Vehicle Fee <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right" viewBox="0 0 16 16">
+            <path d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753"/>
+          </svg></h3>
+    
+    
+    </div>
+    <div style="width:50%">
+        <ng-multiselect-dropdown
+            (onSelect)="selectedVehItems.push($event)"
+            (onDeSelect)="deselectVehMonth($event)"
+            (onSelectAll)="selectAllVehItems()"
+           (onDeSelectAll)="deselectAllVehItems()"
+            [settings]="dropdownSettings"
+            [data]="dropdownList">
+             
+        </ng-multiselect-dropdown>
+    </div>
+    </div>
+</div>
+<hr class="separator">
+<div class="d-flex">
+    <h3>Monthly Fee <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right" viewBox="0 0 16 16">
+        <path d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753"/>
+      </svg></h3>
+</div>
+<div class="d-flex justify-content-between flex-wrap  px-sm-3 px-md-5">
+  <mat-checkbox class="checkbx w-25" color="primary" *ngFor="let month of months_list;let i = index" [(ngModel)]="checkboxStates[i]">{{month.value}}</mat-checkbox> 
+</div>
+<div class="d-flex justify-content-center px-sm-3 px-md-5 mt-3">
+    <div (click)="seeOverview()" class="btn  savebtn text-light"> See Overview </div>
+</div>
+</div>

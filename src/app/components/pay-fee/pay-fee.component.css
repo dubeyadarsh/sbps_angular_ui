@@ -1,0 +1,59 @@
+.feeContainer{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 30px 20px;
+    border: 1.5px solid #091e94 ;
+
+}
+.heading{
+    font-size: 1.5vw;
+    color: #091e94;
+    font-weight: bold;
+}
+h3{
+    font-weight: 500;
+}
+.separator{
+    
+        border: 0;
+        height: 2px;
+        background-image: linear-gradient(to right, #f0f0f0, #020e50, #f0f0f0);
+        box-shadow: 0 1px 2px rgba(29, 41, 174, 0.1);
+      
+}
+.savebtn{
+    background-color: #091e94;
+    width: 75%;
+}
+/* Add this CSS to your component's stylesheet */
+/* Add this to your global styles.css file */
+#mat-mdc-checkbox-1-input{
+    color: #091e94 !important;
+}
+.mdc-checkbox__background{
+    color: #091e94 !important;
+}
+.dropdown {
+    position: relative;
+  }
+  
+  .mat-menu-panel {
+    padding: 0;
+  }
+  
+  .mat-menu-content {
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  }
+  
+  .mat-menu-item {
+    min-width: 150px;
+  }
+  
+  .show {
+    display: block !important;
+  }
+  
+  button.mat-menu-item:hover {
+    background-color: #e0e0e0;
+  }
+  

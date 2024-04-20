@@ -1,0 +1,66 @@
+/* template.component.css */
+
+mat-sidenav {
+    width: 200px;
+  }
+  
+  mat-sidenav-content {
+    padding: 16px;
+  }
+  .matIcons,.custom-hamburger{
+cursor: pointer;
+}
+.header{
+  z-index: 5;
+  position: relative;
+  
+}
+
+.overlay{
+  left: 0;
+    right: 0;
+    top:0;
+    bottom: 0;
+    position: fixed;
+    z-index: 1;
+    background-color: #000;
+    opacity: .7;
+}
+.mat-sidenav-container {
+  z-index:2;
+}
+.annualyear{
+  height: 200px;
+  width: 200px;
+  display: none;
+  background-color: white;
+  position: absolute;
+  right: 50px;
+  top: 50px;
+  z-index: 1;
+  transition: height 2s;
+  transition-timing-function: ease;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.open{
+  display: flex;
+}
+.close{
+  display: none;
+}
+.ayBtn{
+  height: 100%;
+  width: 90px;
+
+  color: white;
+  background-color: #3f51b5;
+}
+.ayBtn:hover{
+  background-color: #091e94;
+}
+.rowBox{
+  flex-wrap: wrap;
+  height: 50px;
+
+}

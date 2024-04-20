@@ -1,0 +1,54 @@
+.homeDiv {
+    position: absolute;
+    top:65px;
+    width:100%;
+    height: calc(100vh-64px);
+    overflow-x: hidden !important;
+}
+.databox{
+    width: 350px;
+    height:120px;
+    background-color: blue;
+    margin: 10px;
+    border-radius: 10px;
+}
+.db1 {
+    background-image: linear-gradient(to right, #3f51b5, #4D6FF6);
+}
+
+.db2 {
+    background-image: linear-gradient(to right, #3f51b5, #20C6D4);
+}
+
+.db3 {
+    background-image: linear-gradient(to right, #3f51b5, #F6AC32);
+}
+.db4 {
+    background-image: linear-gradient(to right, #3f51b5, #50E12A);
+}
+
+h3{
+    font-size: 1.4vw;
+    font-weight: 500;
+}
+p{
+    font-size: 1.25vw;
+}
+.cardimg{
+    height: 200px;
+    width: 300px;
+}
+.topPerImg{
+    height: 200px;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.sugggestedRoute{
+margin: auto 10px;
+}
+.topPerformer{
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: #f8f9fa;
+}
