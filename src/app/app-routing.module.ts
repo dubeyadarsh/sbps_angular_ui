@@ -10,6 +10,8 @@ import { MarksNavComponent } from './components/marks-nav/marks-nav.component';
 import { AddMarksComponent } from './components/add-marks/add-marks.component';
 import { FeeItemComponent } from './components/fee-item/fee-item.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { ReportsNavComponent } from './components/reports-nav/reports-nav.component';
+import { AttendanceReportsComponent } from './components/attendance-reports/attendance-reports.component';
 const routes:Routes=[
   {path:"" , component:LoginComponent},
   {path:"dashboard", canActivate: [AuthGuard], component:HomeComponent},
@@ -38,6 +40,16 @@ const routes:Routes=[
     path: 'fees',
     component: FeeItemComponent,
     canActivate: [AuthGuard],
+  },
+  {
+    path: 'reports',
+    component: ReportsNavComponent,
+    canActivate: [AuthGuard],
+    children: [
+      { path: 'attendance', component: AttendanceReportsComponent },
+      // { path: 'marks', component: MarksComponent },
+      // Add more routes for other menu items
+    ],
   },
   // {path:"login" , component:LoginComponent}
   { path: '**', component: NotFoundComponent }

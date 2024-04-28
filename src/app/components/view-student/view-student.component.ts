@@ -45,7 +45,7 @@ export class ViewStudentComponent {
 },
 
     { headerName: "#Id", maxWidth: 75 , field: "id",headerClass: 'header-black'},
-    { headerName: "Name", field: "name" },
+    { headerName: "Name", filter:true, field: "name" },
     { headerName: "Father Name" , field: "fathername"},
     { headerName: "Mother Name", field: "mothername"},
     { headerName: "DOB" , field: "dob"},

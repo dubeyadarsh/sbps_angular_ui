@@ -72,7 +72,7 @@ export const allListOfRoutes: any[]=[
         title:"Attendance",
         imgPath:'/assets/homeCard/attendance.jpg',
         desc:"Let's dive into Attend. section",
-        routeName:"/attendance"
+        routeName:"/reports/attendance"
     },
     // {
     //     id:5,

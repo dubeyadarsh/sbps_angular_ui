@@ -45,6 +45,11 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { DateFormatPipe } from './components/config/date-format.pipe';
 import { UploadDialogComponent } from './components/upload-dialog/upload-dialog.component';
 import { MatSelectModule } from '@angular/material/select';
+import { ReportsNavComponent } from './components/reports-nav/reports-nav.component';
+import { AttendanceReportsComponent } from './components/attendance-reports/attendance-reports.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core'; // Import MatNativeDateModule
+import { DatePipe } from '@angular/common';
 @NgModule({
   declarations: [
     AppComponent,
@@ -65,6 +70,8 @@ import { MatSelectModule } from '@angular/material/select';
     NotFoundComponent,
     DateFormatPipe,
     UploadDialogComponent,
+    ReportsNavComponent,
+    AttendanceReportsComponent,
   ],
   imports: [
     BrowserModule,
@@ -89,10 +96,11 @@ import { MatSelectModule } from '@angular/material/select';
     MatMenuModule,
     NgMultiSelectDropDownModule,
     MatTooltipModule,
-    MatSelectModule
-    
+    MatSelectModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
-  providers: [AuthService,HalfYearlyPdfService],
+  providers: [AuthService,HalfYearlyPdfService,DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
