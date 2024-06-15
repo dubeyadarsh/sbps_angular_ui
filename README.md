@@ -2,7 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.8.
 
-# sbps - backend -> The repository is currently set to private access; however, you do have access to the frontend repository at this time.
+# sbps - backend
+The repository is currently set to private access; however, you do have access to the frontend repository at this time.
 
 # Screenshots
 Login Page 
